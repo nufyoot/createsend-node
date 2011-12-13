@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>API Documentation for account - CreateSend
+    </title>
+    <script type="text/javascript">var ghuser = 'logicalparadox'
+  , ghproject = 'createsend';
+
+</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="/createsend/public/js/prettify.js"></script>
+    <script src="/createsend/public/js/main.js"></script>
+    <link rel="stylesheet" href="/createsend/public/css/main.css" type="text/css" media="all">
+    <link href="http://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet" type="text/css">
+    <script type="text/javascript">var mpq = [];
+mpq.push(["init", "06ed34b8279cf6344c61dca196693eee"]);
+(function(){var b,a,e,d,c;b=document.createElement("script");b.type="text/javascript";
+b.async=true;b.src=(document.location.protocol==="https:"?"https:":"http:")+
+"//api.mixpanel.com/site_media/js/api/mixpanel.js";a=document.getElementsByTagName("script")[0];
+a.parentNode.insertBefore(b,a);e=function(f){return function(){mpq.push(
+[f].concat(Array.prototype.slice.call(arguments,0)))}};d=["init","track","track_links",
+"track_forms","register","register_once","identify","name_tag","set_config"];for(c=0;c<
+d.length;c++){mpq[d[c]]=e(d[c])}})();
+</script>
+    <script type="text/javascript">var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-26183904-5']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+  </head>
+  <body>
+    <nav>
+      <ul class="sections">
+        <li class="keepcase"><a href="#clientsList" class="scroll">clientsList</a>
+        </li>
+        <li class="keepcase"><a href="#getCountries" class="scroll">getCountries</a>
+        </li>
+        <li class="keepcase"><a href="#getTimezones" class="scroll">getTimezones</a>
+        </li>
+        <li class="keepcase"><a href="#getTimezones" class="scroll">getTimezones</a>
+        </li>
+      </ul>
+      <ul class="pages">
+        <li><a href="/createsend">Home</a>
+        </li>
+      </ul>
+      <ul class="code">
+        <li class="header"><a href="/createsend/code">Api documentation</a>
+        </li>
+        <li><a href="/createsend/code/createsend.html">constructor</a>
+        </li>
+        <li><a href="/createsend/code/account.html">account</a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <h1><a href="/createsend">CreateSend</a>
+      </h1>
+      <div class="description"><p>CreateSend is a <a href="http://nodejs.org">node</a> wrapper for the <a href="http://campaignmonitor.com">Campaign Monitor</a> API.</p>
+      </div>
+      <div class="gh">
+        <h4>Latest Update to Github
+        </h4>
+        <div id="commit"><span id="latestCommitTime">Loading...</span><a id="latestCommitURL"></a>
+        </div>
+        <div id="latestCommitMessage">Loading...
+        </div>
+        <div id="clone"><a href="https://github.com/logicalparadox/createsend" class="button fork">Fork me on GitHub</a>
+          <div class="clone">git clone https://github.com/logicalparadox/createsend.git
+          </div>
+        </div>
+        <div id="links"><a id="repoIssues" href="https://github.com/logicalparadox/createsend/issues">GitHub Issues</a>
+        </div>
+      </div>
+    </header>
+    <section id="content">
+      <div id="code">
+        <article id="clientsList-section" class="codeblock">
+          <div class="header"><h1>.clientsList(callback)</h1>
+          </div>
+          <div class="ctx">
+            <h3>CreateSend.prototype.clientsList()
+            </h3>
+          </div>
+          <div class="tags">
+            <!-- ignroing this-->
+            <div class="tag"><span class="type">&#64;param</span><span class="types">&#123; Function &#125;</span><span class="name">callback</span><span class="desc"></span>
+            </div>
+            <div class="tag"><span class="type">&#64;see</span><span class="name"></span>
+            </div>
+            <div class="tag"><span class="type">&#64;api</span><span class="visibility">public</span>
+            </div>
+          </div>
+          <div class="description"><p>Get a list list of clients.</p>
+          </div>
+          <div class="view-source">View Source
+          </div>
+          <div class="code-wrap">
+            <pre class="source prettyprint"><code>CreateSend.prototype.clientsList = function (callback) {
+  this.execute('GET', 'clients', {}, callback);
+};</code>
+            </pre>
+          </div>
+        </article>
+        <article id="getCountries-section" class="codeblock">
+          <div class="header"><h1>.getCountries(callback)</h1>
+          </div>
+          <div class="ctx">
+            <h3>CreateSend.prototype.getCountries()
+            </h3>
+          </div>
+          <div class="tags">
+            <!-- ignroing this-->
+            <div class="tag"><span class="type">&#64;param</span><span class="types">&#123; Function &#125;</span><span class="name">callback</span><span class="desc"></span>
+            </div>
+            <div class="tag"><span class="type">&#64;see</span><span class="name"></span>
+            </div>
+            <div class="tag"><span class="type">&#64;api</span><span class="visibility">public</span>
+            </div>
+          </div>
+          <div class="description"><p>Get a list list of countries.</p>
+          </div>
+          <div class="view-source">View Source
+          </div>
+          <div class="code-wrap">
+            <pre class="source prettyprint"><code>CreateSend.prototype.getCountries = function (callback) {
+  this.execute('GET', 'countries', {}, callback);
+};</code>
+            </pre>
+          </div>
+        </article>
+        <article id="getTimezones-section" class="codeblock">
+          <div class="header"><h1>.getTimezones(callback)</h1>
+          </div>
+          <div class="ctx">
+            <h3>CreateSend.prototype.getTimezones()
+            </h3>
+          </div>
+          <div class="tags">
+            <!-- ignroing this-->
+            <div class="tag"><span class="type">&#64;param</span><span class="types">&#123; Function &#125;</span><span class="name">callback</span><span class="desc"></span>
+            </div>
+            <div class="tag"><span class="type">&#64;see</span><span class="name"></span>
+            </div>
+            <div class="tag"><span class="type">&#64;api</span><span class="visibility">public</span>
+            </div>
+          </div>
+          <div class="description"><p>Get a list list of timezones.</p>
+          </div>
+          <div class="view-source">View Source
+          </div>
+          <div class="code-wrap">
+            <pre class="source prettyprint"><code>CreateSend.prototype.getTimezones = function (callback) {
+  this.execute('GET', 'timezones', {}, callback);
+};</code>
+            </pre>
+          </div>
+        </article>
+        <article id="getTimezones-section" class="codeblock">
+          <div class="header"><h1>.getSystemdate(callback)</h1>
+          </div>
+          <div class="ctx">
+            <h3>CreateSend.prototype.getSystemdate()
+            </h3>
+          </div>
+          <div class="tags">
+            <!-- ignroing this-->
+            <div class="tag"><span class="type">&#64;param</span><span class="types">&#123; Function &#125;</span><span class="name">callback</span><span class="desc"></span>
+            </div>
+            <div class="tag"><span class="type">&#64;see</span><span class="name"></span>
+            </div>
+            <div class="tag"><span class="type">&#64;api</span><span class="visibility">public</span>
+            </div>
+          </div>
+          <div class="description"><p>Get the current system date..</p>
+          </div>
+          <div class="view-source">View Source
+          </div>
+          <div class="code-wrap">
+            <pre class="source prettyprint"><code>CreateSend.prototype.getSystemdate = function (callback) {
+  this.execute('GET', 'systemdate', {}, callback);
+};</code>
+            </pre>
+          </div>
+        </article>
+      </div>
+    </section>
+    <footer>
+      <div class="branding">CreateSend is&nbsp;<a href="http://alogicalparadox.com">a logical paradox</a>. site generated by
+<a href="http://codexjs.com">codex.</a>
+      </div>
+    </footer>
+  </body>
+</html>
