@@ -6,7 +6,7 @@
     "ghuser": "logicalparadox",
     "ghbaseurl": "/createsend",
     "ghproject": "createsend",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "hasdownloads": false,
     "description": "CreateSend is a [node](http://nodejs.org) wrapper for the [Campaign Monitor](http://campaignmonitor.com) API."
   },
