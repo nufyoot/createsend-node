@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "chai": "*"
+    "chai": "*",
+    "codex": "latest"
   }
 }

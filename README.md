@@ -1,5 +1,7 @@
 # CreateSend API Wrapper
 
+Please view the [documentation site](http://alogicalparadox.com/createsend) for more information.
+
 ## Roadmap
 
 ### Completed
@@ -15,13 +17,6 @@
 * Campaigns
 * Templates
 * Webhooks
-
-## Testing
-
-Tests are written in mocha. First you will need to make `test_data.json` by using
-`test/test_data_sample.json`. Then, install the dependancies and run the make command.
-
-      $ make test
 
 ## License
 
