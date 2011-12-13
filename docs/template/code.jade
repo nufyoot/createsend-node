@@ -53,7 +53,10 @@ block content
                 - else if (tag.type == 'see')
                   .tag
                     span.type &#64;#{tag.type}
-                    span.name #{tag.local}
+                    - if (tag.local)
+                      span.name #{tag.local}
+                    - else if (tag.url)
+                      span.name: a(href=tag.url, target='_blank') [link]
                 - else if (tag.type == 'name')
                   // ignroing this
                 - else

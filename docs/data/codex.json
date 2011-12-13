@@ -22,6 +22,12 @@
       "file": "../../lib/interface/account.js",
       "description": "",
       "github": "https://github.com/logicalparadox/createsend/blob/master/lib/interface/account.js"
+    },
+    "subscribers": {
+      "title": "subscribers",
+      "file": "../../lib/interface/subscribers.js",
+      "description": "",
+      "github": "https://github.com/logicalparadox/createsend/blob/master/lib/interface/subscribers.js"
     }
   }
 }

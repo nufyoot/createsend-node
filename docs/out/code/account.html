@@ -55,6 +55,8 @@ _gaq.push(['_trackPageview']);
         </li>
         <li><a href="/createsend/code/account.html">account</a>
         </li>
+        <li><a href="/createsend/code/subscribers.html">subscribers</a>
+        </li>
       </ul>
     </nav>
     <header>
@@ -90,7 +92,7 @@ _gaq.push(['_trackPageview']);
             <!-- ignroing this-->
             <div class="tag"><span class="type">&#64;param</span><span class="types">&#123; Function &#125;</span><span class="name">callback</span><span class="desc"></span>
             </div>
-            <div class="tag"><span class="type">&#64;see</span><span class="name"></span>
+            <div class="tag"><span class="type">&#64;see</span><span class="name"><a href="http://www.campaignmonitor.com/api/account/#getting_your_clients" target="_blank">[link]</a></span>
             </div>
             <div class="tag"><span class="type">&#64;api</span><span class="visibility">public</span>
             </div>
@@ -101,7 +103,7 @@ _gaq.push(['_trackPageview']);
           </div>
           <div class="code-wrap">
             <pre class="source prettyprint"><code>CreateSend.prototype.clientsList = function (callback) {
-  this.execute('GET', 'clients', {}, callback);
+  this.execute('GET', 'clients', null, {}, callback);
 };</code>
             </pre>
           </div>
@@ -117,7 +119,7 @@ _gaq.push(['_trackPageview']);
             <!-- ignroing this-->
             <div class="tag"><span class="type">&#64;param</span><span class="types">&#123; Function &#125;</span><span class="name">callback</span><span class="desc"></span>
             </div>
-            <div class="tag"><span class="type">&#64;see</span><span class="name"></span>
+            <div class="tag"><span class="type">&#64;see</span><span class="name"><a href="http://www.campaignmonitor.com/api/account/#getting_countries" target="_blank">[link]</a></span>
             </div>
             <div class="tag"><span class="type">&#64;api</span><span class="visibility">public</span>
             </div>
@@ -128,7 +130,7 @@ _gaq.push(['_trackPageview']);
           </div>
           <div class="code-wrap">
             <pre class="source prettyprint"><code>CreateSend.prototype.getCountries = function (callback) {
-  this.execute('GET', 'countries', {}, callback);
+  this.execute('GET', 'countries', null, {}, callback);
 };</code>
             </pre>
           </div>
@@ -144,7 +146,7 @@ _gaq.push(['_trackPageview']);
             <!-- ignroing this-->
             <div class="tag"><span class="type">&#64;param</span><span class="types">&#123; Function &#125;</span><span class="name">callback</span><span class="desc"></span>
             </div>
-            <div class="tag"><span class="type">&#64;see</span><span class="name"></span>
+            <div class="tag"><span class="type">&#64;see</span><span class="name"><a href="http://www.campaignmonitor.com/api/account/#getting_timezones" target="_blank">[link]</a></span>
             </div>
             <div class="tag"><span class="type">&#64;api</span><span class="visibility">public</span>
             </div>
@@ -155,7 +157,7 @@ _gaq.push(['_trackPageview']);
           </div>
           <div class="code-wrap">
             <pre class="source prettyprint"><code>CreateSend.prototype.getTimezones = function (callback) {
-  this.execute('GET', 'timezones', {}, callback);
+  this.execute('GET', 'timezones', null, {}, callback);
 };</code>
             </pre>
           </div>
@@ -171,7 +173,7 @@ _gaq.push(['_trackPageview']);
             <!-- ignroing this-->
             <div class="tag"><span class="type">&#64;param</span><span class="types">&#123; Function &#125;</span><span class="name">callback</span><span class="desc"></span>
             </div>
-            <div class="tag"><span class="type">&#64;see</span><span class="name"></span>
+            <div class="tag"><span class="type">&#64;see</span><span class="name"><a href="http://www.campaignmonitor.com/api/account/#getting_systemdate" target="_blank">[link]</a></span>
             </div>
             <div class="tag"><span class="type">&#64;api</span><span class="visibility">public</span>
             </div>
@@ -182,7 +184,7 @@ _gaq.push(['_trackPageview']);
           </div>
           <div class="code-wrap">
             <pre class="source prettyprint"><code>CreateSend.prototype.getSystemdate = function (callback) {
-  this.execute('GET', 'systemdate', {}, callback);
+  this.execute('GET', 'systemdate', null, {}, callback);
 };</code>
             </pre>
           </div>

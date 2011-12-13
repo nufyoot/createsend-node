@@ -51,6 +51,8 @@ _gaq.push(['_trackPageview']);
         </li>
         <li><a href="/createsend/code/account.html">account</a>
         </li>
+        <li><a href="/createsend/code/subscribers.html">subscribers</a>
+        </li>
       </ul>
     </nav>
     <header>
@@ -132,12 +134,16 @@ _gaq.push(['_trackPageview']);
           <div class="view-source">View Source
           </div>
           <div class="code-wrap">
-            <pre class="source prettyprint"><code>CreateSend.prototype.execute = function (method, path, params, callback) {
+            <pre class="source prettyprint"><code>CreateSend.prototype.execute = function (method, path, qs, params, callback) {
   var auth = 'Basic ' + new Buffer(this.apiKey + ':magic').toString('base64')
     , uri = (this.secure) ? 'https://api.createsend.com/api/' : 'http://api.createsend.com/api/';
 
   callback = callback || function () {};
   uri = uri + this.version + '/' + path + '.json';
+
+  if (qs) {
+    uri = uri + '?' + querystring.stringify(qs);
+  }
 
   request(
     { method: method
@@ -149,7 +155,11 @@ _gaq.push(['_trackPageview']);
   , function (error, response, body) {
       var code = response.statusCode;
       if (code == 200 || code == 201) {
-        callback(null, JSON.parse(body));
+        if (body) {
+          callback(null, JSON.parse(body));
+        } else {
+          callback(null);
+        }
       } else {
         callback(JSON.parse(body));
       }
