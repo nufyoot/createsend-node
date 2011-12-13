@@ -1,0 +1,24 @@
+{
+  "author": "Jake Luer <jake@alogicalparadox.com>",
+  "name": "createsend",
+  "description": "A wrapper for the Campaign Monitor API.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/logicalparadox/createsend.git"
+  },
+  "main": "./index",
+  "scripts": {
+    "test": "make test"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "dependencies": {
+    "request": "2.2.x"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*"
+  }
+}
