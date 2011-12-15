@@ -7,10 +7,10 @@ Please view the [documentation site](http://alogicalparadox.com/createsend) for 
 ### Completed
 
 * Account
+* Subscribers
 
 ### Upcoming
 
-* Subscribers
 * Clients
 * Lists
 * Segments
