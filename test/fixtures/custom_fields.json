@@ -1,0 +1,23 @@
+[
+  {
+    "FieldName": "website",
+    "Key": "[website]",
+    "DataType": "Text",
+    "FieldOptions": [],
+    "VisibleInPreferenceCenter": true
+  },
+  {
+    "FieldName": "age",
+    "Key": "[age]",
+    "DataType": "Number",
+    "FieldOptions": [],
+    "VisibleInPreferenceCenter": true
+  },
+  {
+    "FieldName": "subscription date",
+    "Key": "[subscriptiondate]",
+    "DataType": "Date",
+    "FieldOptions": [],
+    "VisibleInPreferenceCenter": false
+  }
+]

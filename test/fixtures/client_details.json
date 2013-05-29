@@ -1,0 +1,28 @@
+{
+  "ApiKey": "639d8cc27198202f5fe6037a8b17a29a59984b86d3289bc9",
+  "AccessDetails": {
+    "Username": "clientone",
+    "AccessLevel": 23
+  },
+  "BasicDetails": {
+    "ClientID": "4a397ccaaa55eb4e6aa1221e1e2d7122",
+    "CompanyName": "Client One",
+    "ContactName": "Client One (contact)",
+    "EmailAddress": "contact@example.com",
+    "Country": "Australia",
+    "TimeZone": "(GMT+10:00) Canberra, Melbourne, Sydney"
+  },
+  "BillingDetails": {
+     "CanPurchaseCredits": true,
+     "Credits": 500,
+     "MarkupOnDesignSpamTest": 0.0,
+     "ClientPays": true,
+     "BaseRatePerRecipient": 1.0,
+     "MarkupPerRecipient": 0.0,
+     "MarkupOnDelivery": 0.0,
+     "BaseDeliveryRate": 5.0,
+     "Currency": "USD",
+     "BaseDesignSpamTestRate": 5.0,
+     "MonthlyScheme": "Basic"
+  }
+}
