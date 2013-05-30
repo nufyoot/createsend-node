@@ -6,11 +6,12 @@ Please view the [documentation site](http://alogicalparadox.com/createsend) for 
 
 ### Completed
 
-* Account
-* Subscribers
+* Campaigns
 
 ### Upcoming
 
+* Accounts
+* Subscribers
 * Clients
 * Lists
 * Segments

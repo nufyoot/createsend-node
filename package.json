@@ -1,8 +1,8 @@
 {
   "author": "Jake Luer <jake@alogicalparadox.com>",
-  "name": "createsend-node",
+  "name": "createsend",
   "description": "A node wrapper for the Campaign Monitor API.",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/logicalparadox/createsend.git"
@@ -20,6 +20,7 @@
   "devDependencies": {
     "mocha": "*",
     "chai": "*",
-    "codex": "latest"
+    "codex": "latest",
+    "node-fakeweb": "*"
   }
 }
