@@ -1,5 +1,7 @@
 # CreateSend API Wrapper
 
+[![Build Status](https://travis-ci.org/nufyoot/createsend.png?branch=master)](https://travis-ci.org/nufyoot/createsend)
+
 Please view the [documentation site](http://alogicalparadox.com/createsend) for more information.
 
 ## Roadmap
