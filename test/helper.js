@@ -12,7 +12,7 @@ module.exports = {
   stubRawRequest: function (uri, responseFile) {
     fakeweb.registerUri({
       uri: uri,
-      body: fs.readFileSync(__dirname + '/fixtures/' + responseFile)
+      body: responseFile ? fs.readFileSync(__dirname + '/fixtures/' + responseFile) : ''
     });
   }
 }
