@@ -55,4 +55,12 @@ describe('CreateSend', function () {
       done();
     });
   });
+
+  it('should get system date', function (done) {
+    helper.stubRequest('systemdate.json', 'systemdate.json');
+    api.getSystemDate(function (err, result) {
+      result.SystemDate.should.equal("2010-10-15 09:27:00");
+      done();
+    });
+  });
 });
