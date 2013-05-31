@@ -8,7 +8,7 @@ var clientId    = '87y8d7qyw8d7yq8w7ydwqwd';
 var api = new createsend({ apiKey: apiKey });
 
 describe('Campaigns', function () {
-  it('create a campaign', function (done) {
+  it('should create a campaign', function (done) {
     helper.stubRequest('campaigns/' + clientId + '.json', 'create_campaign.json');
     api.campaign.create(clientId, {
         'Name': 'name',
@@ -34,7 +34,7 @@ describe('Campaigns', function () {
     );
   });
 
-  it('create a campaign from a template', function (done) {
+  it('should create a campaign from a template', function (done) {
     templateContent = {
       Singlelines: [
         {
