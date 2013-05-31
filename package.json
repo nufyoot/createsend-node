@@ -15,12 +15,12 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
-    "request": "2.2.x"
+    "request": "2.x"
   },
   "devDependencies": {
     "mocha": "*",
     "chai": "*",
-    "codex": "latest",
+    "codex": "*",
     "node-fakeweb": "*"
   }
 }
