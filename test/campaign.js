@@ -10,7 +10,7 @@ var api = new createsend({ apiKey: apiKey });
 describe('Campaigns', function () {
   it('should create a campaign', function (done) {
     helper.stubRequest('campaigns/' + clientId + '.json', 'create_campaign.json');
-    api.campaign.create(clientId, {
+    api.campaigns.create(clientId, {
         'Name': 'name',
         'Subject': 'subject',
         'FromName': 'g\'day',
@@ -86,7 +86,7 @@ describe('Campaigns', function () {
     }
 
     helper.stubRequest('campaigns/' + clientId + '/fromtemplate.json', 'create_campaign.json');
-    api.campaign.createFromTemplate(clientId, {
+    api.campaigns.createFromTemplate(clientId, {
         'Subject': 'subject',
         'Name': 'name',
         'FromName': 'g\'day',
