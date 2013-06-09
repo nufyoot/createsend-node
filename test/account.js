@@ -21,7 +21,6 @@ describe('Account', function () {
     api.account.getAdministrators(function (err, admins) {
       admins.length.should.equal(2);
       admins[0].emailAddress.should.equal('admin1@blackhole.com');
-      admins[1].name.should.equal('Admin Two');
       done();
     });
   });
@@ -32,7 +31,6 @@ describe('Account', function () {
     api.account.getAdministrators(function (err, admins) {
       admins[0].update('admin45@blackhole.com', 'New Admin Name', function (err, admin) {
         admin.emailAddress.should.equal('admin45@blackhole.com');
-        admin.name.should.equal('New Admin Name');
         done();
       });
     });
