@@ -1,3 +1,9 @@
+0.6.0 / 2013-06-12
+==================
+
+  * Added full support for Accounts
+  * Added partial support for Campaigns
+
 0.1.0 / 2013-05-30
 ==================
 
