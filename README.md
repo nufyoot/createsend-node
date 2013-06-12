@@ -8,11 +8,11 @@ Please view the [documentation site](http://alogicalparadox.com/createsend) for 
 
 ### Completed
 
-* Campaigns
+* Accounts
 
 ### Upcoming
 
-* Accounts
+* Campaigns
 * Subscribers
 * Clients
 * Lists
