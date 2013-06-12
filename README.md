@@ -11,10 +11,9 @@
 
 ### Upcoming
 
-* Campaigns
-* Subscribers
 * Clients
 * Lists
 * Segments
+* Subscribers
 * Templates
 * Webhooks

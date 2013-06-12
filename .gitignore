@@ -2,3 +2,4 @@
 node_modules/
 test/test_data.json
 .DS_Store
+credentials.json
