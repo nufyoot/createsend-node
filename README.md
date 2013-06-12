@@ -16,6 +16,5 @@
 * Clients
 * Lists
 * Segments
-* Campaigns
 * Templates
 * Webhooks
