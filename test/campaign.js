@@ -158,4 +158,35 @@ describe('Campaigns', function () {
       done();
     });
   });
+
+  it('should get lists and segments', function (done) {
+    helper.stubRequest('campaigns/' + campaignId + '/listsandsegments.json', 'campaign_listsandsegments.json');
+    api.campaigns.getListsAndSegments(campaignId, function (err, listsAndSegments) {
+      listsAndSegments.Lists.length.should.equal(1);
+      listsAndSegments.Segments.length.should.equal(1);
+      listsAndSegments.Lists[0].Name.should.equal('List One');
+      listsAndSegments.Lists[0].ListID.should.equal('a58ee1d3039b8bec838e6d1482a8a965');
+      listsAndSegments.Segments[0].Title.should.equal('Segment for campaign');
+      listsAndSegments.Segments[0].ListID.should.equal('2bea949d0bf96148c3e6a209d2e82060');
+      listsAndSegments.Segments[0].SegmentID.should.equal('dba84a225d5ce3d19105d7257baac46f');
+      done();
+    });
+  });
+
+  it('should get the recipients', function (done) {
+    helper.stubRequest('campaigns/' + campaignId + '/recipients.json', 'campaign_recipients.json');
+    api.campaigns.getRecipients(campaignId, null, function (err, recipients) {
+      recipients.ResultsOrderedBy.should.equal('email');
+      recipients.OrderDirection.should.equal('asc');
+      recipients.PageNumber.should.equal(1);
+      recipients.PageSize.should.equal(20);
+      recipients.RecordsOnThisPage.should.equal(20);
+      recipients.TotalNumberOfRecords.should.equal(2200);
+      recipients.NumberOfPages.should.equal(110);
+      recipients.Results.length.should.equal(20);
+      recipients.Results[0].EmailAddress.should.equal('subs+6g76t7t0@example.com');
+      recipients.Results[0].ListID.should.equal('a994a3caf1328a16af9a69a730eaa706');
+      done();
+    });
+  });
 });
