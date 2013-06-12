@@ -139,10 +139,22 @@ describe('Campaigns', function () {
       summary.Mentions.should.equal(23);
       summary.Forwards.should.equal(11)
       summary.Likes.should.equal(32);
-      summary.WebVersionURL.should.equal("http://createsend.com/t/r-3A433FC72FFE3B8B");
-      summary.WebVersionTextURL.should.equal("http://createsend.com/t/r-3A433FC72FFE3B8B/t");
-      summary.WorldviewURL.should.equal("http://client.createsend.com/reports/wv/r/3A433FC72FFE3B8B");
+      summary.WebVersionURL.should.equal('http://createsend.com/t/r-3A433FC72FFE3B8B');
+      summary.WebVersionTextURL.should.equal('http://createsend.com/t/r-3A433FC72FFE3B8B/t');
+      summary.WorldviewURL.should.equal('http://client.createsend.com/reports/wv/r/3A433FC72FFE3B8B');
       summary.SpamComplaints.should.equal(23);
+      done();
+    });
+  });
+
+  it('should get email client usage', function (done) {
+    helper.stubRequest('campaigns/' + campaignId + '/emailclientusage.json', 'email_client_usage.json');
+    api.campaigns.getEmailClientUsage(campaignId, function (err, usage) {
+      usage.length.should.equal(6);
+      usage[0].Client.should.equal('iOS Devices');
+      usage[0].Version.should.equal('iPhone');
+      usage[0].Percentage.should.equal(19.83);
+      usage[0].Subscribers.should.equal(7056);
       done();
     });
   });
