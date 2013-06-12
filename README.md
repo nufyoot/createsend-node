@@ -7,9 +7,6 @@
 ### Completed
 
 * Accounts
-
-### Completed (minus testing)
-
 * Campaigns
 
 ### Upcoming
