@@ -7,24 +7,6 @@ var apiKey      = '123123123123123123123';
 var api = new createsend({ apiKey: apiKey });
 
 describe('CreateSend', function () {
-  it('should get all clients', function (done) {
-    helper.stubRequest('clients.json', 'clients.json');
-    api.getClients(function (err, clients) {
-      clients.length.should.equal(2);
-      clients[0].ClientID.should.equal('4a397ccaaa55eb4e6aa1221e1e2d7122');
-      clients[0].Name.should.equal('Client One');
-      done();
-    });
-  });
-
-  it('should get billing details', function (done) {
-    helper.stubRequest('billingdetails.json', 'billingdetails.json');
-    api.getBillingDetails(function (err, billingDetails) {
-      billingDetails.Credits.should.equal(3021);
-      done();
-    });
-  });
-
   it('should get a person\'s api key', function (done) {
     var username = 'myusername';
     var password = 'mypassword';
