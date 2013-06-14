@@ -1,3 +1,3 @@
-var libPath = process.env['KALLY_RAZOR_COV'] ? './lib-cov' : './lib';
+var libPath = process.env['CREATESEND_NODE_COV'] ? './lib-cov' : './lib';
 
 module.exports = require(libPath + '/createsend');
