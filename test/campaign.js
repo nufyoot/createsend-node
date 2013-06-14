@@ -118,7 +118,7 @@ describe('Campaigns', function () {
 
   it('should send a preview', function (done) {
     helper.stubRequest('campaigns/' + campaignId + '/sendpreview.json', null);
-    api.campaigns.sendDraft(campaignId, {
+    api.campaigns.sendPreview(campaignId, {
       'PreviewRecipients': [ 'test1@example.com', 'test2@example.com' ],
       'Personalize': 'Random'
     }, function (err, result) {
