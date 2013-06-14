@@ -1,6 +1,7 @@
 
 TESTS = test/*.js
 REPORTER = dot
+INTEGRATION = integration/*.js
 
 docs: clean-docs
 	@./node_modules/.bin/codex build docs \
@@ -16,5 +17,9 @@ test:
 		--reporter $(REPORTER) \
 		--timeout 10000 \
 		$(TESTS)
+integration:
+	@NODE_ENV=test ./node_modules/.bin/mocha \
+		--reporter $(REPORTER) \
+		$(INTEGRATION)
 
-.PHONY: clean-docs docs test
+.PHONY: clean-docs docs test integration
