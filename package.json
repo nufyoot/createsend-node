@@ -21,6 +21,9 @@
     "mocha": "*",
     "chai": "*",
     "codex": "*",
-    "node-fakeweb": "*"
+    "node-fakeweb": "*",
+    "coveralls": "*",
+    "jscoverage": "*",
+    "mocha-lcov-reporter": "*"
   }
 }
