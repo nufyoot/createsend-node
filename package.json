@@ -9,7 +9,7 @@
   },
   "main": "./index",
   "scripts": {
-    "test": "make test"
+    "test": "make test-coveralls"
   },
   "engines": {
     "node": ">= 0.8.0"
