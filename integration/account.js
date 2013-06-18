@@ -1,6 +1,6 @@
 /****************************************************************************
  * The purpose of this file is to test the account functions against a 
- * Campaign Monitor account.  Many of the tests are just to ensure we
+ * CreateSend account.  Many of the tests are just to ensure we
  * got something valid back from the server
  ***************************************************************************/
 var createsend  = require('../');
