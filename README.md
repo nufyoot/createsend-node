@@ -9,10 +9,10 @@
 
 * Accounts
 * Campaigns
+* Clients
 
 ### Upcoming
 
-* Clients
 * Lists
 * Segments
 * Subscribers
