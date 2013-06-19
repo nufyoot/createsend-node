@@ -11,7 +11,6 @@ function sendFixture(res, filename) {
     });
 }
 
-
 app.get('/api/v3/clients.json', function (req, res) {
     sendFixture(res, 'clients');
 });

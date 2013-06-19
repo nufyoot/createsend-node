@@ -13,8 +13,8 @@
 * Lists
 * Segments
 * Subscribers
+* Templates
 
 ### Upcoming
 
-* Templates
 * Webhooks
