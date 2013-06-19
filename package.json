@@ -15,8 +15,7 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
-    "request": "2.x",
-    "coveralls": "~2.0.13"
+    "request": "2.x"
   },
   "devDependencies": {
     "mocha": "*",
