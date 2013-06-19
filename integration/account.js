@@ -74,4 +74,14 @@ describe('Account', function () {
             done();
         });
     });
+
+    it('should get the system date', function (done) {
+        api.getSystemDate(function (err, result) {
+            should.not.exist(err);
+            should.exist(result);
+            should.exist(result.SystemDate);
+            should.exist(result.SystemDate.getMonth);
+            done();
+        });
+    });
 });

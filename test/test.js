@@ -32,6 +32,10 @@ app.get('/api/v3/timezones.json', function (req, res) {
     sendFixture(res, 'timezones');
 });
 
+app.get('/api/v3/systemdate.json', function (req, res) {
+    sendFixture(res, 'systemdate');
+});
+
 app.listen(3000);
 
 require('../integration/account.js');

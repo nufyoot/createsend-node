@@ -10,11 +10,11 @@
 * Accounts
 * Campaigns
 * Clients
-
-### Upcoming
-
 * Lists
 * Segments
 * Subscribers
+
+### Upcoming
+
 * Templates
 * Webhooks
