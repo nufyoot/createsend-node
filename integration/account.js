@@ -8,8 +8,24 @@ var fs          = require('fs');
 var chai        = require('chai');
 
 var should      = chai.should();
-var apiDetails  = JSON.parse(fs.readFileSync('./integration/credentials.json'));
-var api         = new createsend(apiDetails);
+var apiDetails;
+var api;
+
+if (process.env.NODE_ENV == 'integration') {  
+    apiDetails = JSON.parse(fs.readFileSync('./integration/credentials.json'));
+    api = new createsend(apiDetails);
+} else {
+    apiDetails = { 
+        apiKey: "981298u298ue98u219e8u2e98u2", 
+        siteurl: "", 
+        username: "", 
+        password: "" 
+    };
+    api = new createsend(apiDetails, {
+        secure: false,
+        baseUri: 'localhost:3000'
+    })
+}
 
 describe('Account', function () {
     it('should get clients', function (done) {

@@ -1,6 +1,6 @@
 
 TESTS = test/*.js
-REPORTER = dot
+REPORTER = spec
 INTEGRATION = integration/*.js
 
 docs: clean-docs
@@ -18,7 +18,7 @@ test:
 		--timeout 10000 \
 		$(TESTS)
 integration:
-	@NODE_ENV=test ./node_modules/.bin/mocha \
+	@NODE_ENV=integration ./node_modules/.bin/mocha \
 		--reporter $(REPORTER) \
 		$(INTEGRATION)
 
