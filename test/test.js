@@ -11,6 +11,9 @@ function sendFixture(res, filename) {
     });
 }
 
+//---------------------------------------------------------------------------
+// Account requests
+//---------------------------------------------------------------------------
 app.get('/api/v3/clients.json', function (req, res) {
     sendFixture(res, 'clients');
 });
@@ -35,6 +38,40 @@ app.get('/api/v3/systemdate.json', function (req, res) {
     sendFixture(res, 'systemdate');
 });
 
+//---------------------------------------------------------------------------
+// Client requests
+//---------------------------------------------------------------------------
+app.post('/api/v3/clients.json', function (req, res) {
+    sendFixture(res, 'create_client');
+});
+
+app.get('/api/v3/clients/32a381c49a2df99f1d0c6f3c112352b9.json', function (req, res) {
+    sendFixture(res, 'client_details');
+});
+
+app.delete('/api/v3/clients/32a381c49a2df99f1d0c6f3c112352b9.json', function (req, res) {
+    res.send("");
+});
+
+//---------------------------------------------------------------------------
+// List requests
+//---------------------------------------------------------------------------
+app.post('/api/v3/lists/32a381c49a2df99f1d0c6f3c112352b9.json', function (req, res) {
+    sendFixture(res, 'create_list');
+});
+
+app.get('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee.json', function (req, res) {
+    sendFixture(res, 'list_details');
+});
+
+//---------------------------------------------------------------------------
+// Subscriber requests
+//---------------------------------------------------------------------------
+app.post('/api/v3/subscribers/e3c5f034d68744f7881fdccf13c2daee.json', function (req, res) {
+    sendFixture(res, 'add_subscriber');
+});
+
 app.listen(3000);
 
 require('../integration/account.js');
+require('../integration/workflow1.js');
