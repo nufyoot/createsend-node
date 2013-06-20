@@ -6,6 +6,7 @@
 var createsend  = require('../');
 var fs          = require('fs');
 var chai        = require('chai');
+var sleep       = require('sleep');
 
 var should      = chai.should();
 var apiDetails;
@@ -95,16 +96,25 @@ describe('Clients', function () {
             should.exist(subscriber);
             should.exist(subscriber.getDetails);
             testSubscriber = subscriber;
+            // This timeout is necessary.  CM adds subscribers async so we need to wait from them to catch up.
+            sleep.sleep(2);
             done();
         });
     });
 
     it('should update a subscriber', function (done) {
-        api.subscribers.updateSubscriber(testList.listId, testSubscriber.emailAddress, {
+        api.subscribers.updateSubscriber(testList.listId, 'test@test.com', {
             'EmailAddress': 'test2@test.com',
             'Name': 'New Subscriber (Updated)',
             'CustomFields': []
         }, function (err) {
+            should.not.exist(err);
+            done();
+        });
+    });
+
+    it('should delete a subscriber', function (done) {
+        api.subscribers.deleteSubscriber(testList.listId, 'test2@test.com', function (err) {
             should.not.exist(err);
             done();
         });
