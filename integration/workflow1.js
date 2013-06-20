@@ -47,13 +47,10 @@ describe('Clients', function () {
     });
 
     after(function (done) {
-        /*
         testClient.delete(function (err) {
             should.not.exist(err);
             done();
         });
-        */
-        done();
     })
 
     it('should get client details', function (done) {
@@ -110,6 +107,6 @@ describe('Clients', function () {
         }, function (err) {
             should.not.exist(err);
             done();
-        })
+        });
     });
 })
