@@ -83,6 +83,14 @@ app.delete('/api/v3/subscribers/e3c5f034d68744f7881fdccf13c2daee.json', function
     res.send("");
 });
 
+app.get('/api/v3/subscribers/e3c5f034d68744f7881fdccf13c2daee/history.json', function (req, res) {
+    sendFixture(res, 'subscriber_history');
+});
+
+app.post('/api/v3/subscribers/e3c5f034d68744f7881fdccf13c2daee/unsubscribe.json', function (req, res) {
+    res.send("");
+});
+
 app.listen(3000);
 
 require('../integration/account.js');

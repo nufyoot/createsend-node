@@ -123,6 +123,22 @@ describe('Clients', function () {
         });
     });
 
+    it('should get subscriber history', function (done) {
+        api.subscribers.getSubscriberHistory(testList.listId, 'test2@test.com', function (err, history) {
+            should.not.exist(err);
+            should.exist(history);
+            should.exist(history.length);
+            done();
+        });
+    });
+
+    it('should unsubscribe', function (done) {
+        api.subscribers.unsubscribeSubscriber(testList.listId, 'test2@test.com', function (err) {
+            should.not.exist(err);
+            done();
+        });
+    });
+
     it('should delete a subscriber', function (done) {
         api.subscribers.deleteSubscriber(testList.listId, 'test2@test.com', function (err) {
             should.not.exist(err);
