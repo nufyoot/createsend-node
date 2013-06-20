@@ -47,10 +47,13 @@ describe('Clients', function () {
     });
 
     after(function (done) {
+        /*
         testClient.delete(function (err) {
             should.not.exist(err);
             done();
         });
+        */
+        done();
     })
 
     it('should get client details', function (done) {
@@ -96,6 +99,17 @@ describe('Clients', function () {
             should.exist(subscriber.getDetails);
             testSubscriber = subscriber;
             done();
+        });
+    });
+
+    it('should update a subscriber', function (done) {
+        api.subscribers.updateSubscriber(testList.listId, testSubscriber.emailAddress, {
+            'EmailAddress': 'test2@test.com',
+            'Name': 'New Subscriber (Updated)',
+            'CustomFields': []
+        }, function (err) {
+            should.not.exist(err);
+            done();
         })
-    })
+    });
 })
