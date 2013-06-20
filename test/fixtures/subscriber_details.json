@@ -1,6 +1,6 @@
 {
-  "EmailAddress": "subscriber@example.com",
-  "Name": "Subscriber One",
+  "EmailAddress": "test2@test.com",
+  "Name": "New Subscriber (Updated)",
   "Date": "2010-10-25 10:28:00",
   "State": "Active",
   "CustomFields": [

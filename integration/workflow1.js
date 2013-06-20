@@ -11,8 +11,9 @@ var sleep       = require('sleep');
 var should      = chai.should();
 var apiDetails;
 var api;
+var isIntegrationTest = process.env.NODE_ENV == 'integration';
 
-if (process.env.NODE_ENV == 'integration') {  
+if (isIntegrationTest) {  
     apiDetails = JSON.parse(fs.readFileSync('./integration/credentials.json'));
     api = new createsend(apiDetails);
 } else {
@@ -97,7 +98,7 @@ describe('Clients', function () {
             should.exist(subscriber.getDetails);
             testSubscriber = subscriber;
             // This timeout is necessary.  CM adds subscribers async so we need to wait from them to catch up.
-            sleep.sleep(2);
+            isIntegrationTest && sleep.sleep(2);
             done();
         });
     });
@@ -109,6 +110,15 @@ describe('Clients', function () {
             'CustomFields': []
         }, function (err) {
             should.not.exist(err);
+            done();
+        });
+    });
+
+    it('should get subscriber details', function (done) {
+        api.subscribers.getSubscriberDetails(testList.listId, 'test2@test.com', function (err, details) {
+            should.not.exist(err);
+            should.exist(details);
+            details.Name.should.equal('New Subscriber (Updated)');
             done();
         });
     });

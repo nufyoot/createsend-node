@@ -20,6 +20,7 @@ test:
 integration:
 	@NODE_ENV=integration ./node_modules/.bin/mocha \
 		--reporter $(REPORTER) \
+		--timeout 10000 \
 		$(INTEGRATION)
 
 lib-cov:

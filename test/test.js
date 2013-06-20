@@ -75,6 +75,14 @@ app.put('/api/v3/subscribers/e3c5f034d68744f7881fdccf13c2daee.json', function (r
     res.send("");
 })
 
+app.get('/api/v3/subscribers/e3c5f034d68744f7881fdccf13c2daee.json', function (req, res) {
+    sendFixture(res, 'subscriber_details');
+});
+
+app.delete('/api/v3/subscribers/e3c5f034d68744f7881fdccf13c2daee.json', function (req, res) {
+    res.send("");
+});
+
 app.listen(3000);
 
 require('../integration/account.js');
