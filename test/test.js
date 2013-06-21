@@ -91,7 +91,12 @@ app.post('/api/v3/subscribers/e3c5f034d68744f7881fdccf13c2daee/unsubscribe.json'
     res.send("");
 });
 
+app.post('/api/v3/subscribers/e3c5f034d68744f7881fdccf13c2daee/import.json', function (req, res) {
+    sendFixture(res, 'import_subscribers')
+});
+
 app.listen(3000);
 
 require('../integration/account.js');
-require('../integration/workflow1.js');
+require('../integration/subscribers.js');
+require('../integration/lists.js');
