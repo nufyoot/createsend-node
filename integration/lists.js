@@ -87,4 +87,16 @@ describe('Lists', function () {
             done();
         });
     });
+
+    it('should update a custom field', function (done) {
+        api.lists.updateCustomField(testList.listId, customFieldKey, {
+            'FieldName': 'New Custom Field Renamed',
+            'VisibleInPreferenceCenter': false
+        }, function (err, result) {
+            should.not.exist(err);
+            should.exist(result);
+            customFieldKey = result;
+            done();
+        });
+    })
 })

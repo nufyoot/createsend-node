@@ -4,6 +4,8 @@ var path    = require('path');
 
 var app = express();
 
+app.use(express.bodyParser());
+
 function sendFixture(res, filename) {
     fs.readFile(path.join(__dirname, './fixtures/' + filename + '.json'), function (err, data) {
         if (err) throw err;
@@ -70,6 +72,10 @@ app.post('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee/customfields.json', fun
 
 app.put('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee/customfields/:key/options.json', function (req, res) {
     res.send("");
+});
+
+app.put('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee/customfields/:key.json', function (req, res) {
+    res.send('"' + req.params.key + '"');
 });
 
 //---------------------------------------------------------------------------
