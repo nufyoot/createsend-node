@@ -64,6 +64,14 @@ app.get('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee.json', function (req, re
     sendFixture(res, 'list_details');
 });
 
+app.post('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee/customfields.json', function (req, res) {
+    sendFixture(res, 'create_custom_field');
+});
+
+app.put('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee/customfields/:key/options.json', function (req, res) {
+    res.send("");
+});
+
 //---------------------------------------------------------------------------
 // Subscriber requests
 //---------------------------------------------------------------------------

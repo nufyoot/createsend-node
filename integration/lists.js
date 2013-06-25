@@ -29,10 +29,10 @@ if (isIntegrationTest) {
     })
 }
 
-describe('Clients', function () {
+describe('Lists', function () {
     var testClient;
     var testList;
-    var testSubscriber;
+    var customFieldKey;
 
     before(function (done) {
         api.clients.addClient({
@@ -44,12 +44,45 @@ describe('Clients', function () {
             should.exist(client);
             should.exist(client.getDetails);
             testClient = client;
-            done();
+
+            testClient.createList({
+                'Title': 'New Test List'
+            }, function (err, list) {
+                should.not.exist(err);
+                should.exist(list);
+                should.exist(list.getDetails);
+                testList = list;
+                done();
+            })
         });
     });
 
     after(function (done) {
         testClient.delete(function (err) {
+            should.not.exist(err);
+            done();
+        });
+    });
+
+    it('should create a custom field', function (done) {
+        api.lists.createCustomField(testList.listId, {
+            'FieldName': 'New Custom Field',
+            'DataType': 'MultiSelectOne',
+            'Options': [ 'HTML', 'Text' ],
+            'VisibleInPreferenceCenter': true
+        }, function (err, result) {
+            should.not.exist(err);
+            should.exist(result);
+            customFieldKey = result;
+            done();
+        });
+    });
+
+    it('should update existing options', function (done) {
+        api.lists.updateCustomFieldOptions(testList.listId, customFieldKey, {
+            'KeepExistingOptions': true,
+            'Options': [ 'Image' ]
+        }, function (err) {
             should.not.exist(err);
             done();
         });
