@@ -52,7 +52,7 @@ app.get('/api/v3/clients/32a381c49a2df99f1d0c6f3c112352b9.json', function (req, 
 });
 
 app.delete('/api/v3/clients/32a381c49a2df99f1d0c6f3c112352b9.json', function (req, res) {
-    res.send("");
+    res.send('');
 });
 
 //---------------------------------------------------------------------------
@@ -71,11 +71,23 @@ app.post('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee/customfields.json', fun
 });
 
 app.put('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee/customfields/:key/options.json', function (req, res) {
-    res.send("");
+    res.send('');
 });
 
 app.put('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee/customfields/:key.json', function (req, res) {
-    res.send('"' + req.params.key + '"');
+    sendFixture(res, 'update_custom_field');
+});
+
+app.get('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee/customfields.json', function (req, res) {
+    sendFixture(res, 'custom_fields');
+});
+
+app.delete('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee.json', function (req, res) {
+    res.send('');
+});
+
+app.delete('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee/customfields/:key.json', function (req, res) {
+    res.send('');
 });
 
 //---------------------------------------------------------------------------
@@ -86,7 +98,7 @@ app.post('/api/v3/subscribers/e3c5f034d68744f7881fdccf13c2daee.json', function (
 });
 
 app.put('/api/v3/subscribers/e3c5f034d68744f7881fdccf13c2daee.json', function (req, res) {
-    res.send("");
+    res.send('');
 })
 
 app.get('/api/v3/subscribers/e3c5f034d68744f7881fdccf13c2daee.json', function (req, res) {
@@ -94,7 +106,7 @@ app.get('/api/v3/subscribers/e3c5f034d68744f7881fdccf13c2daee.json', function (r
 });
 
 app.delete('/api/v3/subscribers/e3c5f034d68744f7881fdccf13c2daee.json', function (req, res) {
-    res.send("");
+    res.send('');
 });
 
 app.get('/api/v3/subscribers/e3c5f034d68744f7881fdccf13c2daee/history.json', function (req, res) {
@@ -102,7 +114,7 @@ app.get('/api/v3/subscribers/e3c5f034d68744f7881fdccf13c2daee/history.json', fun
 });
 
 app.post('/api/v3/subscribers/e3c5f034d68744f7881fdccf13c2daee/unsubscribe.json', function (req, res) {
-    res.send("");
+    res.send('');
 });
 
 app.post('/api/v3/subscribers/e3c5f034d68744f7881fdccf13c2daee/import.json', function (req, res) {

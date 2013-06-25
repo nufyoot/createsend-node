@@ -98,5 +98,37 @@ describe('Lists', function () {
             customFieldKey = result;
             done();
         });
-    })
+    });
+
+    it('should get the custom fields', function (done) {
+        api.lists.getCustomFields(testList.listId, function (err, fields) {
+            should.not.exist(err);
+            should.exist(fields);
+            should.exist(fields.length);
+            done();
+        });
+    });
+
+    it('should delete the custom field', function (done) {
+        api.lists.deleteCustomField(testList.listId, customFieldKey, function (err) {
+            should.not.exist(err);
+            done();
+        });
+    });
+
+    it('should update the list', function (done) {
+        api.lists.updateList(testList.listId, {
+            'Title': 'New Test List Renamed'
+        }, function (err) {
+            should.not.exist(err);
+            done();
+        })
+    });
+
+    it('should delete the list', function (done) {
+        api.lists.deleteList(testList.listId, function (err) {
+            should.not.exist(err);
+            done();
+        });
+    });
 })
