@@ -125,6 +125,56 @@ describe('Lists', function () {
         })
     });
 
+    it('should get the active subscribers', function (done) {
+        api.lists.getActiveSubscribers(testList.listId, { }, function (err, results) {
+            should.not.exist(err);
+            should.exist(results);
+            should.exist(results.RecordsOnThisPage);
+            should.exist(results.Results.length);
+            done();
+        });
+    });
+
+    it('should get the unconfirmed subscribers', function (done) {
+        api.lists.getUnconfirmedSubscribers(testList.listId, { }, function (err, results) {
+            should.not.exist(err);
+            should.exist(results);
+            should.exist(results.RecordsOnThisPage);
+            should.exist(results.Results.length);
+            done();
+        });
+    });
+
+    it('should get the unsubscribed subscribers', function (done) {
+        api.lists.getUnsubscribedSubscribers(testList.listId, { }, function (err, results) {
+            should.not.exist(err);
+            should.exist(results);
+            should.exist(results.RecordsOnThisPage);
+            should.exist(results.Results.length);
+            done();
+        });
+    });
+
+    it('should get the bounced subscribers', function (done) {
+        api.lists.getBouncedSubscribers(testList.listId, { }, function (err, results) {
+            should.not.exist(err);
+            should.exist(results);
+            should.exist(results.RecordsOnThisPage);
+            should.exist(results.Results.length);
+            done();
+        });
+    });
+
+    it('should get the deleted subscribers', function (done) {
+        api.lists.getDeletedSubscribers(testList.listId, { }, function (err, results) {
+            should.not.exist(err);
+            should.exist(results);
+            should.exist(results.RecordsOnThisPage);
+            should.exist(results.Results.length);
+            done();
+        });
+    });
+
     it('should delete the list', function (done) {
         api.lists.deleteList(testList.listId, function (err) {
             should.not.exist(err);
