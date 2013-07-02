@@ -175,6 +175,15 @@ describe('Lists', function () {
         });
     });
 
+    it('should get the list stats', function (done) {
+        api.lists.getStats(testList.listId, function (err, results) {
+            should.not.exist(err);
+            should.exist(results);
+            should.exist(results.TotalActiveSubscribers);
+            done();
+        });
+    });
+
     it('should delete the list', function (done) {
         api.lists.deleteList(testList.listId, function (err) {
             should.not.exist(err);

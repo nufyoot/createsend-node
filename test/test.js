@@ -90,6 +90,34 @@ app.delete('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee/customfields/:key.jso
     res.send('');
 });
 
+app.get('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee/stats.json', function (req, res) {
+    sendFixture(res, 'list_stats')
+});
+
+app.put('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee.json', function (req, res) {
+    res.send('');
+});
+
+app.get('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee/active.json', function (req, res) {
+    sendFixture(res, 'active_subscribers');
+});
+
+app.get('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee/bounced.json', function (req, res) {
+    sendFixture(res, 'bounced_subscribers');
+});
+
+app.get('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee/unconfirmed.json', function (req, res) {
+    sendFixture(res, 'unconfirmed_subscribers');
+});
+
+app.get('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee/unsubscribed.json', function (req, res) {
+    sendFixture(res, 'unsubscribed_subscribers');
+});
+
+app.get('/api/v3/lists/e3c5f034d68744f7881fdccf13c2daee/deleted.json', function (req, res) {
+    sendFixture(res, 'deleted_subscribers');
+});
+
 //---------------------------------------------------------------------------
 // Subscriber requests
 //---------------------------------------------------------------------------
