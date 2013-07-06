@@ -32,9 +32,20 @@ if (isIntegrationTest) {
 describe('Campaigns', function () {
     var testClient;
     var testList;
-    var testSubscriber;
+    var testCampaign;
 
     before(function (done) {
+        var createList = function () {
+            testClient.createList({
+                'Title': 'Test List'
+            }, function (err, list) {
+                should.not.exist(err);
+                should.exist(list);
+                testList = list;
+                done();
+            })
+        };
+
         api.clients.addClient({
             'CompanyName': 'Client One',
             'Country': 'Australia',
@@ -44,7 +55,7 @@ describe('Campaigns', function () {
             should.exist(client);
             should.exist(client.getDetails);
             testClient = client;
-            done();
+            createList();
         });
     });
 
@@ -56,6 +67,23 @@ describe('Campaigns', function () {
     });
 
     it('should create a new campaign', function (done) {
-        done();
+        api.campaigns.create(testClient.clientId, {
+            'Name': 'Test Campaign',
+            'Subject': 'Test Campaign',
+            'FromName': 'Terry Tice',
+            'FromEmail': 'test@test.com',
+            'ReplyTo': 'test@test.com',
+            'HtmlUrl': 'http://test.com/',
+            'ListIDs': [
+                testList.listId
+            ],
+            'SegmentIDs': []
+        }, function (err, campaign) {
+            should.not.exist(err);
+            should.exist(campaign);
+            should.exist(campaign.campaignId);
+            testCampaign = campaign;
+            done();
+        })
     });
 });

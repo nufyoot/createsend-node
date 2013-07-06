@@ -149,6 +149,13 @@ app.post('/api/v3/subscribers/e3c5f034d68744f7881fdccf13c2daee/import.json', fun
     sendFixture(res, 'import_subscribers')
 });
 
+//---------------------------------------------------------------------------
+// Campaign requests
+//---------------------------------------------------------------------------
+app.post('/api/v3/campaigns/32a381c49a2df99f1d0c6f3c112352b9.json', function (req, res) {
+    sendFixture(res, 'create_campaign');
+});
+
 app.listen(3000);
 
 require('../integration/account.js');
