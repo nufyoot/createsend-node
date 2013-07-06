@@ -154,3 +154,4 @@ app.listen(3000);
 require('../integration/account.js');
 require('../integration/subscribers.js');
 require('../integration/lists.js');
+require('../integration/campaigns.js')
