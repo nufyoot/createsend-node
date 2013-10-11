@@ -73,7 +73,7 @@ describe('Campaigns', function () {
             'FromName': 'Terry Tice',
             'FromEmail': 'test@test.com',
             'ReplyTo': 'test@test.com',
-            'HtmlUrl': 'http://test.com/',
+            'HtmlUrl': 'http://example.com/',
             'ListIDs': [
                 testList.listId
             ],
