@@ -1,0 +1,16 @@
+{
+  "name": "createsend-node-samples",
+  "version": "1.0.0",
+  "description": "Sample scripts for CreateSend-Node",
+  "main": "account.js",
+  "dependencies": {
+    "createsend-node": "~0.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD"
+}
