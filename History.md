@@ -4,6 +4,7 @@
   * Updated Client.addPerson to return a Person object as the callback result
   * Started documentation for Client
   * Locked Express to version 3.8.* until I can get Mocha working with it
+  * Removed support for Node 0.8 and 0.9
 
 0.6.1 / 2013-06-12
 ==================
