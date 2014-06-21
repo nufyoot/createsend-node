@@ -40,8 +40,8 @@ describe('Account', function () {
     it('should get billing details', function (done) {
         api.account.getBillingDetails(function (err, billing) {
             should.not.exist(err);
-            should.exist(billing.Credits);
-            billing.Credits.should.equal(0);
+            should.exist(billing.credits);
+            billing.credits.should.equal(0);
             done();
         });
     });
