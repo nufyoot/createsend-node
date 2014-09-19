@@ -26,5 +26,15 @@
     "mocha-lcov-reporter": "*",
     "express": "3.8.x",
     "sleep": "*"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/nufyoot/createsend-node/issues"
+  },
+  "homepage": "https://github.com/nufyoot/createsend-node",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "campaign-monitor"
+  ]
 }
