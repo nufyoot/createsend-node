@@ -1,3 +1,9 @@
+0.7.3 / 2014-09-19
+==================
+
+  * Fixed up lib/interface/person.js and removed some compiler errors
+  * Fixed up lib/interface/client.js and removed some compiler errors
+
 0.7.2 / 2014-06-20
 ==================
 
