@@ -13,7 +13,8 @@ var api;
 
 if (process.env.NODE_ENV == 'integration') {
     apiDetails = JSON.parse(fs.readFileSync('./integration/credentials.json'));
-    api = new createsend(apiDetails);
+    options = JSON.parse(fs.readFileSync('./integration/options.json'));
+    api = new createsend(apiDetails, options);
 } else {
     apiDetails = {
         apiKey: "981298u298ue98u219e8u2e98u2",
@@ -46,15 +47,6 @@ describe('Account', function () {
         });
     });
 
-    it('should get your API key', function (done) {
-        api.getApiKey(apiDetails.siteurl, apiDetails.username, apiDetails.password, function (err, key) {
-            should.not.exist(err);
-            should.exist(key.ApiKey);
-            key.ApiKey.should.equal(apiDetails.apiKey);
-            done();
-        });
-    });
-
     it('should get the list of countries', function (done) {
         api.getCountries(function (err, countries) {
             should.not.exist(err);
@@ -69,8 +61,6 @@ describe('Account', function () {
         api.getTimezones(function (err, timezones) {
             should.not.exist(err);
             should.exist(timezones);
-            timezones.should.have.length(101);
-            timezones[15].should.equal('(GMT+02:00) Harare, Pretoria');
             done();
         });
     });

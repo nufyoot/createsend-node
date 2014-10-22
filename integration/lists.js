@@ -1,5 +1,5 @@
 /****************************************************************************
- * The purpose of this file is to test the account functions against a 
+ * The purpose of this file is to test the account functions against a
  * CreateSend account.  Many of the tests are just to ensure we
  * got something valid back from the server
  ***************************************************************************/
@@ -13,15 +13,16 @@ var apiDetails;
 var api;
 var isIntegrationTest = process.env.NODE_ENV == 'integration';
 
-if (isIntegrationTest) {  
+if (isIntegrationTest) {
     apiDetails = JSON.parse(fs.readFileSync('./integration/credentials.json'));
-    api = new createsend(apiDetails);
+    options = JSON.parse(fs.readFileSync('./integration/options.json'));
+    api = new createsend(apiDetails, options);
 } else {
-    apiDetails = { 
-        apiKey: "981298u298ue98u219e8u2e98u2", 
-        siteurl: "", 
-        username: "", 
-        password: "" 
+    apiDetails = {
+        apiKey: "981298u298ue98u219e8u2e98u2",
+        siteurl: "",
+        username: "",
+        password: ""
     };
     api = new createsend(apiDetails, {
         secure: false,
