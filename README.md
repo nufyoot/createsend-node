@@ -10,11 +10,17 @@ npm install createsend-node
 
 ### Authenticating
 
-The only supported authentication, for now, is the API key. Support for OAuth will be coming shortly.
-
+via API Key
 ```
 var createsend = require('createsend-node');
 var auth = { apiKey: 'your api key' };
+var api = new createsend(auth);
+```
+
+via AccessToken (Oauth)
+```
+var createsend = require('createsend-node');
+var auth = { accessToken: 'your access token' };
 var api = new createsend(auth);
 ```
 
