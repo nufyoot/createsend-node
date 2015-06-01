@@ -2,7 +2,7 @@
   "author": "Terry Tice <nufyoot@gmail.com>",
   "name": "createsend-node",
   "description": "A node wrapper for the Campaign Monitor API.",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "repository": {
     "type": "git",
     "url": "git://github.com/nufyoot/createsend-node.git"
