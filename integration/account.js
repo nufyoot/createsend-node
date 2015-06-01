@@ -42,7 +42,7 @@ describe('Account', function () {
         api.account.getBillingDetails(function (err, billing) {
             should.not.exist(err);
             should.exist(billing.credits);
-            billing.credits.should.equal(0);
+            billing.credits.should.be.a('Number');
             done();
         });
     });
