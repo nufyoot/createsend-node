@@ -6,7 +6,6 @@
 var createsend  = require('../');
 var fs          = require('fs');
 var chai        = require('chai');
-var sleep       = require('sleep');
 
 var should      = chai.should();
 var apiDetails;
