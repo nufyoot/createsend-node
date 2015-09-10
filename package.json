@@ -25,7 +25,8 @@
     "jscoverage": "*",
     "mocha-lcov-reporter": "*",
     "express": "3.8.x",
-    "sleep": "*"
+    "sleep": "*",
+    "body-parser": "*"
   },
   "bugs": {
     "url": "https://github.com/nufyoot/createsend-node/issues"
