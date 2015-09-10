@@ -1,0 +1,13 @@
+{ 
+    "Query": 
+    { 
+        "From": "2015-08-12",
+        "To": "2015-09-10",
+        "TimeZone": "(UTC+10:00) Canberra, Melbourne, Sydney" 
+    },
+    "Sent": 254,
+    "Bounces": 2,
+    "Delivered": 252,
+    "Opened": 131,
+    "Clicked": 26 
+}

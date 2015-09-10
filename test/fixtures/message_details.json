@@ -1,0 +1,24 @@
+{ "MessageID": "0f35d46f-47c5-11e5-a012-1086f014547c",
+  "SmartEmailID": "53e872f5-d8d7-46c9-b3d2-e7c7fc650708",
+  "SentAt": "2015-08-21T15:26:39+10:00",
+  "Status": "Sent",
+  "Recipient": "test@test.com",
+  "Message": 
+   { "From": "test <test@test.com>",
+     "ReplyTo": "test@test.com",
+     "To": [ "test@test.com" ],
+     "CC": [ "test@test.com" ],
+     "Subject": "Campaign Monitor: A new release has been scheduled!",
+     "Body": 
+      { "Html": "<html><p>testing</p></html>",
+        "Text": "A new release has been scheduled!" 
+      },
+     "Data": 
+      { 
+        "releaseCreator": "Richard Bremner"
+      }
+  },
+  "TotalOpens": 1,
+  "TotalClicks": 0,
+  "CanBeResent": true 
+}
