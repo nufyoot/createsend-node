@@ -160,7 +160,7 @@ app.post('/api/v3/campaigns/32a381c49a2df99f1d0c6f3c112352b9.json', function (re
 //---------------------------------------------------------------------------
 // Transactional requests
 //---------------------------------------------------------------------------
-app.get('/api/v3.1/transactional/smartemail/', function (req, res) {
+app.get('/api/v3.1/transactional/smartemail', function (req, res) {
     sendFixture(res, 'smart_email_list');
 });
 
@@ -184,7 +184,7 @@ app.get('/api/v3.1/transactional/statistics', function (req, res) {
     sendFixture(res, 'statistics');
 });
 
-app.get('/api/v3.1/transactional/messages/', function (req, res) {
+app.get('/api/v3.1/transactional/messages', function (req, res) {
     sendFixture(res, 'message_timeline');
 });
 

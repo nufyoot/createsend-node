@@ -18,7 +18,7 @@ if (isIntegrationTest) {
     api = new createsend(apiDetails, options);
 } else {
     apiDetails = {
-        apiKey: "162d375a82641fd277d777746b8e604c93c5edfb3e9d49ff",
+        apiKey: "981298u298ue98u219e8u2e98u2",
         siteurl: "",
         username: "",
         password: ""
