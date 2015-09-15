@@ -1,0 +1,9 @@
+[ { "MessageID": "5cc01e4b-575d-11e5-ad3e-f6026f3fad15",
+    "Recipient": "test@test.com",
+    "Status": "Accepted" },
+  { "MessageID": "5cc01e4b-575d-11e5-9e35-8dac96717558",
+    "Recipient": "test@test.com",
+    "Status": "Accepted" },
+  { "MessageID": "5cc01e4b-575d-11e5-9629-6a25787e55e3",
+    "Recipient": "test@test.com",
+    "Status": "Accepted" } ]

@@ -1,0 +1,17 @@
+[ 
+    { 
+        "Status": "Accepted",
+        "MessageID": "83a6ad82-574c-11e5-a323-e85f0d1b1f84",
+        "Recipient": "test@testemail.com.au" 
+    },
+    { 
+        "Status": "Accepted",
+        "MessageID": "83a6ad82-574c-11e5-a69e-6ac8b44c7a14",
+        "Recipient": "fakeemail@fakies.com" 
+    },
+    { 
+        "Status": "Accepted",
+        "MessageID": "83a6ad82-574c-11e5-a060-517339f3402f",
+        "Recipient": "jerry@seinfeld.com" 
+    } 
+]

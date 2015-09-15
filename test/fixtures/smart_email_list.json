@@ -1,0 +1,32 @@
+[
+  { 
+    "ID": "a981aa73-365d-40a6-bff5-94c955b06a30",
+    "Name": "releaseit",
+    "CreatedAt":"2015-08-04T14:47:48+10:00",
+    "Status": "active" 
+  },
+  { 
+    "ID": "53e872f5-d8d7-46c9-b3d2-e7c7fc650708",
+    "Name": "ReleaseIT_txtemplates",
+    "CreatedAt":"2015-08-06T10:15:27+10:00",
+    "Status": "active" 
+  },
+  { 
+    "ID": "93d5e8b7-07a7-496f-bb63-84feed8a7e56",
+    "Name": "Test Email",
+    "CreatedAt":"2015-08-17T15:40:08+10:00",
+    "Status": "draft" 
+  },
+  { 
+    "ID": "bd2f0a51-3914-4a1c-8533-2116d8795b5c",
+    "Name": "Wazzzup",
+    "CreatedAt":"2015-07-29T16:18:00+10:00",
+    "Status": "active" 
+  },
+  { 
+    "ID": "555f1147-22b5-4ce5-b757-82de24a2e662",
+    "Name": "Ya Hey",
+    "CreatedAt":"2015-07-30T11:10:31+10:00",
+    "Status": "active" 
+  }
+]

@@ -1,10 +1,11 @@
 var fs         = require('fs');
 var express    = require('express');
 var path       = require('path');
+var bodyParser = require('body-parser').json();
 
 var app = express();
 
-app.use(express.bodyParser());
+app.use(bodyParser);
 
 function sendFixture(res, filename) {
     fs.readFile(path.join(__dirname, './fixtures/' + filename + '.json'), function (err, data) {
@@ -156,9 +157,50 @@ app.post('/api/v3/campaigns/32a381c49a2df99f1d0c6f3c112352b9.json', function (re
     sendFixture(res, 'create_campaign');
 });
 
+//---------------------------------------------------------------------------
+// Transactional requests
+//---------------------------------------------------------------------------
+app.get('/api/v3.1/transactional/smartemail', function (req, res) {
+    sendFixture(res, 'smart_email_list');
+});
+
+app.get('/api/v3.1/transactional/smartemail/53e872f5-d8d7-46c9-b3d2-e7c7fc650708', function (req, res) {
+    sendFixture(res, 'smart_email_details');
+});
+
+app.post('/api/v3.1/transactional/smartemail/53e872f5-d8d7-46c9-b3d2-e7c7fc650708/send', function (req, res) {
+    sendFixture(res, 'send_smart_email');
+});
+
+app.post('/api/v3.1/transactional/classicEmail/send', function (req, res) {
+    sendFixture(res, 'send_classic_email');
+});
+
+app.get('/api/v3.1/transactional/classicEmail/groups', function (req, res) {
+    sendFixture(res, 'classic_email_group_list');
+});
+
+app.get('/api/v3.1/transactional/statistics', function (req, res) {
+    sendFixture(res, 'statistics');
+});
+
+app.get('/api/v3.1/transactional/messages', function (req, res) {
+    sendFixture(res, 'message_timeline');
+});
+
+app.get('/api/v3.1/transactional/messages/0f35d46f-47c5-11e5-a012-1086f014547c', function (req, res) {
+    sendFixture(res, 'message_details');
+});
+
+app.post('/api/v3.1/transactional/messages/1f4f02b2-577a-11e5-8e36-ed63f5913d87/resend', function (req, res) {
+    sendFixture(res, 'message_resend');
+});
+
+
 app.listen(3000);
 
 require('../integration/account.js');
 require('../integration/subscribers.js');
 require('../integration/lists.js');
-require('../integration/campaigns.js')
+require('../integration/campaigns.js');
+require('../integration/transactional.js');

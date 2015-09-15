@@ -1,0 +1,18 @@
+{ 
+  "SmartEmailID": "bd2f0a51-3914-4a1c-8533-2116d8795b5c",
+  "Name": "Wazzzup",
+  "CreatedAt": "2015-07-29T16:18:00+10:00",
+  "Status": "active",
+  "Properties": { 
+     "From": "Test <test@test.com>",
+     "Subject": "Wazzzup [firstname,fallback=]",
+     "Content": { 
+        "Html": "Content managed in Email Builder",
+        "Text": "Content managed in Email Builder",
+        "EmailVariables": "[Object]",
+        "InlineCss": "true"
+     },
+     "TextPreviewUrl": "http://mytimes.createsend.com/t/i-06E0C223C7E91629/T",
+     "HtmlPreviewUrl": "http://mytimes.createsend.com/t/i-06E0C223C7E91629/" 
+  }
+}
