@@ -2,3 +2,4 @@
 .settings.xml
 .git*
 docs/
+integration/credentials.json
