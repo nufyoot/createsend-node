@@ -53,6 +53,7 @@ describe('Transactional', function () {
             should.exist(client);
             should.exist(client.getDetails);
             testClient = client;
+            details.clientID = client.clientId;
             done();
         });
     });
