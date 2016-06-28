@@ -88,3 +88,21 @@ api.account.getClients(
   }
 );
 ```
+
+### Transaction based actions
+
+Send a transactional email
+```
+var details = {
+  smartEmailID: "string", // The ID of the transactional email
+  to: "string",           // The email address to send it to
+  data: data              // Any data fields required for the email
+};
+
+// Send the smart email(and provide a callback function that takes an error and a response parameter)
+api.transactional.sendSmartEmail(details, function (err, res) {
+  if (err) {
+    console.log(err);
+  }
+});
+```
