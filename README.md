@@ -92,7 +92,7 @@ api.account.getClients(
 ### Transaction based actions
 
 Send a transactional email
-```
+```javascript
 var details = {
   smartEmailID: "string", // The ID of the transactional email
   to: "string",           // The email address to send it to
@@ -108,7 +108,7 @@ api.transactional.sendSmartEmail(details, (err, res) => {
 ### Subscribers based actions
 
 Add a subscriber to a list
-```
+```javascript
 var listId = 'kajsbndkasjbkanf123j13nj21k3n2' // The ID of the list
 var details = {
   EmailAddress: 'email@example.com',
@@ -123,4 +123,4 @@ api.subscribers.addSubscriber(listId, details, (err, res) => {
 });
 ```
 
-  Side Note: To get the ID of the list, in CM, go to `Lists & Subscribers`, choose the list you want and click on `change name/type`.
+> Side Note: To get the ID of the list, in CM, go to `Lists & Subscribers`, choose the list you want and click on `change name/type`.
