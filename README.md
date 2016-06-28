@@ -100,9 +100,27 @@ var details = {
 };
 
 // Send the smart email(and provide a callback function that takes an error and a response parameter)
-api.transactional.sendSmartEmail(details, function (err, res) {
-  if (err) {
-    console.log(err);
-  }
+api.transactional.sendSmartEmail(details, (err, res) => {
+  if (err)  console.log(err);
 });
 ```
+
+### Subscribers based actions
+
+Add a subscriber to a list
+```
+var listId = 'kajsbndkasjbkanf123j13nj21k3n2' // The ID of the list
+var details = {
+  EmailAddress: 'email@example.com',
+  Name: `John Smith`,
+  CustomFields: [
+    { Key: 'CustomKey', Value: 'Some Value' }
+  ]
+};
+
+api.subscribers.addSubscriber(listId, details, (err, res) => {
+  if (err) console.log(err);
+});
+```
+
+  Side Note: To get the ID of the list, in CM, go to `Lists & Subscribers`, choose the list you want and click on `change name/type`.
