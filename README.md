@@ -124,3 +124,21 @@ api.subscribers.addSubscriber(listId, details, (err, res) => {
 ```
 
 > Side Note: To get the ID of the list, in CM, go to `Lists & Subscribers`, choose the list you want and click on `change name/type`.
+
+### Single Sign on
+
+For single sign on, you need to get an integrator ID from Campaign Monitor.  
+
+```javascript
+var sso =   {
+  "Email": "email@example.com",
+  "Chrome": "all", // all, tabs, none - what to show on the page.
+  "Url": "/subscribers/search?search=belle@example.com", // forward URL
+  "IntegratorID": "ABC123",
+  "ClientID": "50410920P49018328"
+}
+api.account.sso(sso,function(err,response){
+  if (err) console.log(err);
+})
+
+```
