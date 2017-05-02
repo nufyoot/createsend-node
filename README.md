@@ -2,35 +2,37 @@
 
 [![Build Status](https://travis-ci.org/nufyoot/createsend-node.png?branch=master)](https://travis-ci.org/nufyoot/createsend-node) [![Dependency Status](https://gemnasium.com/nufyoot/createsend-node.png)](https://gemnasium.com/nufyoot/createsend-node) [![Coverage Status](https://coveralls.io/repos/nufyoot/createsend-node/badge.svg)](https://coveralls.io/r/nufyoot/createsend-node)
 
-### Installation
+## Installation
 
 ```
 npm install createsend-node
 ```
 
-### Authenticating
+## Authenticating
 
 via API Key
-```
+
+```javascript
 var createsend = require('createsend-node');
 var auth = { apiKey: 'your api key' };
 var api = new createsend(auth);
 ```
 
 via AccessToken (Oauth)
-```
+
+```javascript
 var createsend = require('createsend-node');
 var auth = { accessToken: 'your access token' };
 var api = new createsend(auth);
 ```
 
-### Basic classes
+## Basic classes
 
 I've wrapped just about every request in some type of class to make life a lot easier when dealing with request from the Campaign Monitor API. Here are the classes that exist in createsend-node.
 
-#### Client
+### Client
 
-```
+```javascript
 {
     clientId: "This will be the Id from Campaign Monitor",
     name: "The name of the client",
@@ -78,10 +80,11 @@ I've wrapped just about every request in some type of class to make life a lot e
 }
 ```
 
-### Account based actions
+## Account based actions
 
 Get the list of clients.
-```
+
+```javascript
 api.account.getClients(
   function (err, clientList) {
 
@@ -89,9 +92,10 @@ api.account.getClients(
 );
 ```
 
-### Transaction based actions
+## Transaction based actions
 
 Send a transactional email
+
 ```javascript
 var details = {
   smartEmailID: "string", // The ID of the transactional email
@@ -105,9 +109,10 @@ api.transactional.sendSmartEmail(details, (err, res) => {
 });
 ```
 
-### Subscribers based actions
+## Subscribers based actions
 
 Add a subscriber to a list
+
 ```javascript
 var listId = 'kajsbndkasjbkanf123j13nj21k3n2' // The ID of the list
 var details = {
@@ -124,3 +129,44 @@ api.subscribers.addSubscriber(listId, details, (err, res) => {
 ```
 
 > Side Note: To get the ID of the list, in CM, go to `Lists & Subscribers`, choose the list you want and click on `change name/type`.
+
+## Campaigns Actions
+
+Create a campaign draft from a template
+
+```javascript
+var details = {
+    "Name": "campaign_name",    // name of the campaign
+    "Subject": "subject",       // subject of the campaign
+    "FromName": "string",       // "from" name
+    "FromEmail": "string",      // "from" email address
+    "ReplyTo": "string",        // "reply to" email address
+    "ListIDs": ["string","string"], // array of lists to send the campaign to
+    "TemplateID": "string",     // id of the template
+    "TemplateContent": {        // only an example, follow the instructions at https://www.campaignmonitor.com/api/campaigns/#creating-campaign-template to match your template
+        "Multilines": [{
+            "Content": "string"
+        }],
+        "Singlelines": [{
+            "Content": "string"
+        }]
+    }
+}
+
+api.campaigns.createFromTemplate(details, (err, res) => {
+  if (err)  console.log(err);
+});
+```
+
+Send a Draft Campaign
+
+```javascript
+var details = {
+    "ConfirmationEmail": "string",    // single email address or array (max 5) of addresses that will receive the confirmation of the campaign being sent correctly
+    "SendDate": "string"              // when to send the campaign. It can be "Immediately" or a date in YYYY-MM-DD HH:MM format
+}
+
+api.campaigns.sendDraft(details, (err, res) => {
+  if (err)  console.log(err);
+});
+```
