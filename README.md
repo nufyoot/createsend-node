@@ -95,8 +95,8 @@ Send a transactional email
 ```javascript
 var details = {
   smartEmailID: "string", // The ID of the transactional email
-  to: "string",           // The email address to send it to
-  data: data              // Any data fields required for the email
+  To: "string",           // The email address to send it to
+  Data: data              // Any data fields required for the email
 };
 
 // Send the smart email(and provide a callback function that takes an error and a response parameter)
