@@ -135,6 +135,8 @@ api.subscribers.addSubscriber(listId, details, (err, res) => {
 Create a campaign draft from a template
 
 ```javascript
+var clientId = "xxxxx";
+
 var details = {
     "Name": "campaign_name",    // name of the campaign
     "Subject": "subject",       // subject of the campaign
@@ -153,7 +155,7 @@ var details = {
     }
 }
 
-api.campaigns.createFromTemplate(details, (err, res) => {
+api.campaigns.createFromTemplate(clientId, details, (err, res) => {
   if (err)  console.log(err);
 });
 ```
